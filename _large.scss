@@ -1,0 +1,95 @@
+
+/* Desktop */
+$typical_margin: 80px;
+
+@media only screen and (min-width: 1024px) {
+    body{
+        // overflow:hidden;
+        margin: 0px;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    header{
+        font-family: 'Times New Roman', Times, serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: $typical_margin;
+        menu{
+            margin-top: $typical_margin/2;
+            margin-right: $typical_margin;
+            display: flex;
+            justify-content: space-around;
+            font-size: 24px;
+        }
+        #header_left {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img{
+                margin-right: $typical_margin/2;
+                margin-top: $typical_margin/2;
+                height: 150px;
+                width: auto;
+            }
+            div{
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size: 32px;
+            }
+        }
+        #hamburger{
+            display:none;
+        }
+    }
+
+    main {
+        flex: 1;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        .text_box {
+            font-size: 16px;    
+            position: relative;
+            border-style: solid;
+            border-width: medium; 
+            background-color: #E0E4CC;
+            padding: 90px 40px 40px 40px;
+            margin: $typical_margin;
+            margin-top: $typical_margin*0.75;
+            .text_headers{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                width: 60%;
+                height: 50px; 
+                border-style: solid;
+                border-width: 0px 0px medium medium; 
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+            #first_header{ background-color: lightskyblue; }
+            #second_header{ background-color: orange; }
+            #third_header{ background-color: pink; }
+        }
+        #second_box{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    footer {
+        border-style: solid;
+        border-width: medium; 
+        // position: fixed;
+        // left: 0;
+        // bottom: 0;
+        margin: 0px;
+        width: 100%;
+        background-color: #E0E4CC;
+        color: black;
+        text-align: center;
+    }
+}
